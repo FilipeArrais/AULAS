@@ -1,0 +1,58 @@
+// exercicio 1 da ficha pl2
+
+// 2, 5 ,3 ,1 ,4 ,3
+//Sorting: 1,2,3,4,5,5 --->nlog n ou n^2
+
+//Media: 1,2     3    ,4,5 
+//       1,2,   3,3    4,5 -> dois elementos Media    ---->n log n 
+                                                            O(1)     --->q da 0(nlogn)
+
+
+
+// exercicio 3
+
+3-a)  (xa, ya)-->a
+      (xb, yb)-->b
+      (xc, yc)-->c
+
+      {a,b,c,d,e,...}
+      a,b
+      a,c           O(n^3)
+      a,d
+
+3-b)
+
+    (xi,xi^3) é colinear com
+    (xj,xj^3) e
+    (xk,xk^3)
+
+se isto for verdade entao xi+xj+xk = 0
+
+(xi^3-xj^3)/(xi-xj)=(xj^3-xk^3)/(xj-xk)
+
+                ...
+            xi + xj + xk = 0
+
+3.c)
+
+tambem nao é possivel resolver o 3-Colinear em menos de O(n^2)
+
+3.d)
+    (-4,-2,1,1,5)
+
+
+3sum(S);
+    S= sort(S); //0(nlog n)
+    
+    for i in 0, len(S)-1://loop -> O (n^2)
+        start = i+1
+        end = len(S)-1
+        while start != end:
+            if S[i] +S[start] +S[end] = 0
+                return True
+            else if S[i] +S[start] +S[end] < 0
+                start +=1
+            else
+                end -=1
+
+        return False
